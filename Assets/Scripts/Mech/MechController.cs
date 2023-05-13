@@ -62,8 +62,10 @@ public class MechController : MonoBehaviour
         if(!target)
         {
             Debug.Log("NoTarget");
+            agent.enabled = true;
             agent.SetDestination(endPoint.position);
-            isMoving = true;
+            anim.SetBool("Is Moving", true);
+            //isMoving = true;
             Debug.Log("MovingtoPoint");
             target = SearchForEnemy();
             return;
@@ -109,7 +111,7 @@ public class MechController : MonoBehaviour
             Debug.Log(("Stop"));
             agent.enabled= false;
             isMoving = false;
-            anim.SetBool("IsMoving", false);
+            anim.SetBool("Is Moving", false);
         }
     }
 
@@ -124,7 +126,8 @@ public class MechController : MonoBehaviour
 
                 Debug.Log("MovingtoTarget");
                 isMoving = true;
-                anim.SetBool("IsMoving", true);
+                agent.SetDestination(endPoint.position);
+                anim.SetBool("Is Moving", true);
             }
         }
         else
@@ -136,14 +139,11 @@ public class MechController : MonoBehaviour
     public void Aiming()
     {
         Idle();
-        if (Vector3.Angle(target.transform.forward, transform.position - target.transform.position) > 1)
-        {
-           transform.LookAt(target.transform.position);
-        }
-        else
-        {
-            Firing();
-        }
+
+        transform.LookAt(target.transform.position);
+    
+        Firing();
+    
     }
 
     public void Firing()
@@ -151,8 +151,9 @@ public class MechController : MonoBehaviour
         attackTimer += Time.deltaTime;
         if (attackTimer >= fireRate)
         {
+            anim.SetTrigger("Shoot");
             Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLoc.position, projectileSpawnLoc.rotation);
-            projectile.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 1000);
             attackTimer = 0;
         }
     }
@@ -168,6 +169,7 @@ public class MechController : MonoBehaviour
         {
             GameManager.Instance.DeadFriendlyMech();
         }
+        Destroy(gameObject);
         //DoDie stuff
 
     }
