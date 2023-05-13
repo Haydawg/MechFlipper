@@ -6,6 +6,7 @@ public class Grappling : MonoBehaviour
 {
     private ThirdPersonController player;
     public Transform cam;
+    public Camera mainCam;
     public Transform grappleTip;
     public LayerMask grappleable;
     public LineRenderer lineRenderer;
@@ -25,13 +26,15 @@ public class Grappling : MonoBehaviour
     void Start()
     {
         player = GetComponent<ThirdPersonController>();
+        cam = Camera.main.transform;
+        mainCam = Camera.main;
         isGrappling = false;
         lineRenderer.enabled = false;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             StartGrapple();
         }
@@ -53,13 +56,15 @@ public class Grappling : MonoBehaviour
     {
         if (grappleCooldownTimer > 0)
             return;
+
         isGrappling = true;
-        player.freeze = true;
+        player.activeGrapple = true;
+        //player.freeze = true;
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
 
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = mainCam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)); ;
         if (Physics.Raycast(ray, out hit, maxGrappleDistance, grappleable))
         {
             grapplePoint= hit.point;
@@ -70,7 +75,8 @@ public class Grappling : MonoBehaviour
             grapplePoint = cam.position + ray.direction * maxGrappleDistance;
             Invoke(nameof(StopGrapple), grappleDelayTime);
         }
-
+        player.transform.LookAt(grapplePoint);
+        player.anim.SetTrigger("Fire");
         lineRenderer.enabled = true;
         lineRenderer.SetPosition(1, grapplePoint);
     }
@@ -85,7 +91,7 @@ public class Grappling : MonoBehaviour
         if (grapplePointRelativeYPos < 0) highestPointOnArc = overshootYAxis;
 
         player.JumpToPosition(grapplePoint, highestPointOnArc);
-
+        player.anim.SetTrigger("Start Swing");
         Invoke(nameof(StopGrapple), 3f);
     }
     public void StopGrapple()

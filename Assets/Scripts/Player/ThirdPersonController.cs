@@ -17,7 +17,10 @@ public class ThirdPersonController : MonoBehaviour
     public bool freeze;
     public bool activeGrapple;
     public bool enableMovementOnNextTouch;
-    [SerializeField] private Animator anim;
+    public Animator anim;
+
+    public Transform backslot;
+    public DroppedPart part;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,9 +80,18 @@ public class ThirdPersonController : MonoBehaviour
                 speed -= acceleration * 2;
             }
         }
+        if (speed <= 0)
+        {
+            anim.SetBool("Is Moving", false);
+        }
+        else
+        {
+            anim.SetBool("Is Moving", true);
+        }
 
-        rb.velocity = new Vector3(moveDirection.x * speed , -9.81f, moveDirection.z * speed );
-        anim.SetFloat("Speed", speed / 10);
+
+        rb.velocity = new Vector3(moveDirection.x * speed  , -9.81f, moveDirection.z * speed );
+        anim.SetFloat("Speed", speed);
 
     }
 

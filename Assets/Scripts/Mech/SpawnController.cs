@@ -24,6 +24,7 @@ public class SpawnController : MonoBehaviour
         {
             Instance = this;
         }
+        spawnTimer = spawnTime;
     }
 
     // Update is called once per frame
@@ -32,9 +33,10 @@ public class SpawnController : MonoBehaviour
         if(numOfEnemyMechs < maxNumOfMechs)
         {
             spawnTimer += Time.deltaTime;
-            if(spawnTimer < spawnTime)
+            if(spawnTimer > spawnTime)
             {
                 Spawn();
+                spawnTimer = 0;
             }
         }
     }

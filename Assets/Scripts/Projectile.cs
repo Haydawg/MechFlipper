@@ -20,12 +20,15 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(TryGetComponent<MechController>(out MechController hitMech))
+        Debug.Log(collision.gameObject);
+        if (collision.gameObject.GetComponentInParent<MechController>())
         {
+            MechController hitMech = collision.gameObject.GetComponentInParent<MechController>();
             hitMech.TakeDamager(damage);
         }
         ContactPoint contact = collision.contacts[0];
         Instantiate(impactEffect, contact.point, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     IEnumerator HandleRemove(float time)
