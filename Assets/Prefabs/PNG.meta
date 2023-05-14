@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/PNG.meta
 guid: 0b686c32be6937448a454f732ec778ba
+========
+guid: 0b6abd47ae40e044fb7f325a411a962d
+>>>>>>>> levelEnvironment:Assets/Models/Anne Environment/Textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

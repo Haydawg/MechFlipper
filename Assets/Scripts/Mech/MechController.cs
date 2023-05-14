@@ -153,7 +153,7 @@ public class MechController : MonoBehaviour
         {
             anim.SetTrigger("Shoot");
             Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLoc.position, projectileSpawnLoc.rotation);
-            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 1000);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 100);
             attackTimer = 0;
         }
     }

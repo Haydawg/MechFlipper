@@ -10,6 +10,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] float timeInScene;
 
     [SerializeField] GameObject impactEffect;
+
+    [SerializeField] MechController[] hitmech;
     // Start is called before the first frame update
     void Start()
     {
