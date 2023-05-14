@@ -6,6 +6,7 @@ public class AnimationEventUpward : MonoBehaviour
 {
    public void Fire()
     {
+        Debug.Log("Firing");
         GetComponentInParent<MechController>().Fire();
     }
 }

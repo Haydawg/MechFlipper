@@ -13,11 +13,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] GameObject impactEffect;
 
     [SerializeField] MechController[] hitmech;
-<<<<<<< HEAD
-=======
 
     public MechController ownerMech;
->>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a
+
     // Start is called before the first frame update
     void Start()
     {

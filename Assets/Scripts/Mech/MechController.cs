@@ -36,6 +36,8 @@ public class MechController : MonoBehaviour, IInteractable
     [Header("Level Information")]
     [SerializeField] private Transform endPoint;
 
+    [SerializeField] GameObject upgradedArm;
+
     [SerializeField] private GameObject target;
     [SerializeField] private bool isMoving;
     public enum Team
@@ -153,11 +155,7 @@ public class MechController : MonoBehaviour, IInteractable
         if (attackTimer >= fireRate)
         {
             anim.SetTrigger("Shoot");
-<<<<<<< HEAD
-            Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLoc.position, projectileSpawnLoc.rotation);
-            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 100);
-=======
->>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a
+
             attackTimer = 0;
         }
     }
@@ -166,10 +164,11 @@ public class MechController : MonoBehaviour, IInteractable
     {
         foreach (Transform spawnLoc in projectileSpawnLoc)
         {
-            if(spawnLoc != null) { return; }
+            Debug.Log("Fire");
+            if(spawnLoc == null) { return; }
             Projectile projectile = Instantiate(projectilePrefab, spawnLoc.position, spawnLoc.rotation);
             projectile.ownerMech = this;
-            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 500);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileVelocity);
         }
     }
     void Die()
@@ -240,6 +239,6 @@ public class MechController : MonoBehaviour, IInteractable
     public void SwapPart(DroppedPart part)
     {
         Destroy(part.gameObject);
-        // do something here
+        upgradedArm.SetActive(true);
     }
 }

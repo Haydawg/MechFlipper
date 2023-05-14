@@ -1220,7 +1220,7 @@ MonoBehaviour:
   agent: {fileID: 5987509618694888496}
   anim: {fileID: 3299789159147611068}
   potentialDrops:
-  - {fileID: 1398625540330903380, guid: 5ec11bdf26247bf4fa065b0502781ec5, type: 3}
+  - {fileID: 1398625540330903380, guid: 154613ce82a682f4dade86466c539d26, type: 3}
   projectilePrefab: {fileID: 775656324178166898, guid: 9d43ecb60e049664d8f06de420caf556, type: 3}
   projectileVelocity: 100
   projectileSpawnLoc:
@@ -1231,6 +1231,7 @@ MonoBehaviour:
   isMoving: 0
   team: 0
   prompt: 
+  canInteract: 0
 --- !u!195 &5987509618694888496
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1507,6 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droppedPart: {fileID: 1398625540330903381, guid: 154613ce82a682f4dade86466c539d26, type: 3}
+  meshRenderer: {fileID: 0}
 --- !u!64 &315230242515397563
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2163,6 +2165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droppedPart: {fileID: 1398625540330903381, guid: 154613ce82a682f4dade86466c539d26, type: 3}
+  meshRenderer: {fileID: 0}
 --- !u!64 &8404993654817356499
 MeshCollider:
   m_ObjectHideFlags: 0

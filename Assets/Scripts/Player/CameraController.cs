@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour
             }
             transform.position = playerController.transform.position + offset;
 
-            transform.LookAt(playerController.transform.position + Vector3.up * 2);
+            transform.LookAt(playerController.transform.position + Vector3.up * 4);
         }
     }
 }

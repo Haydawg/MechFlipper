@@ -1164,7 +1164,8 @@ MonoBehaviour:
   maxGrappleDistance: 100
   grappleTime: 0.2
   grappleDelayTime: 1
-  overshootYAxis: 2
+  overshootYAxis: 0
+  grappleAcceptParticle: {fileID: 0}
 --- !u!114 &7137809512345560487
 MonoBehaviour:
   m_ObjectHideFlags: 0
