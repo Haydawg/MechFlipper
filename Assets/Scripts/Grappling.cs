@@ -21,6 +21,8 @@ public class Grappling : MonoBehaviour
     private float grappleCooldown;
     private float grappleCooldownTimer;
 
+    public GameObject grappleAcceptParticle;
+
     private bool isGrappling;
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,26 @@ public class Grappling : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (!isGrappling)
+        {
+            RaycastHit hit;
+            Ray ray = mainCam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+            if (Physics.Raycast(ray, out hit, maxGrappleDistance, grappleable))
+            {
+                grappleAcceptParticle.SetActive(true);
+                grappleAcceptParticle.transform.position = hit.point;
+            }
+            else
+            {
+                grappleAcceptParticle.SetActive(false);
+            }
+        }
+        else
+        {
+            grappleAcceptParticle.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGrapple();
         }
@@ -98,6 +119,7 @@ public class Grappling : MonoBehaviour
     {
         isGrappling= false;
         player.freeze = false;
+        player.activeGrapple = false;
         grappleCooldownTimer = grappleCooldown;
         lineRenderer.enabled = false;
 

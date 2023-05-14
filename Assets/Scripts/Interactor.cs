@@ -11,7 +11,7 @@ public class Interactor : MonoBehaviour
     private readonly Collider[] colliders = new Collider[3];
     [SerializeField] private int numFound;
     [SerializeField] private InteractionPromptUI interactionPromptUI;
-    private IInteractable interactable;
+    public IInteractable interactable;
 
 
     private void Update()
@@ -21,6 +21,7 @@ public class Interactor : MonoBehaviour
         if(numFound > 0)
         {
             interactable = colliders[0].GetComponent<IInteractable>();
+            if(!interactable.CanInteract) { return; }
             if(!interactionPromptUI.isDisplayed)
             {
                 interactionPromptUI.SetUp(interactable.InteractionPromt);

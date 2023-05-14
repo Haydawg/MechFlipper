@@ -1,14 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
 
-public class MechController : MonoBehaviour
+public class MechController : MonoBehaviour, IInteractable
 {
     public enum State
     {
@@ -24,6 +19,7 @@ public class MechController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float range;
     [SerializeField] private float fireRate;
+    [SerializeField] private float bulletSpeed;
     [SerializeField] private float attackTimer;
     [SerializeField] private float searchRadius;
 
@@ -35,7 +31,7 @@ public class MechController : MonoBehaviour
     [Header("Weapons")]
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private float projectileVelocity;
-    [SerializeField] private Transform projectileSpawnLoc;
+    [SerializeField] private Transform[] projectileSpawnLoc;
 
     [Header("Level Information")]
     [SerializeField] private Transform endPoint;
@@ -50,6 +46,12 @@ public class MechController : MonoBehaviour
 
     [SerializeField] Team team;
 
+    public string prompt;
+    public string InteractionPromt => prompt;
+
+    public bool canInteract;
+    public bool CanInteract => canInteract;
+
     private void Start()
     {
         
@@ -61,12 +63,10 @@ public class MechController : MonoBehaviour
         stateUpdateTimer= 0;
         if(!target)
         {
-            Debug.Log("NoTarget");
             agent.enabled = true;
             agent.SetDestination(endPoint.position);
             anim.SetBool("Is Moving", true);
             //isMoving = true;
-            Debug.Log("MovingtoPoint");
             target = SearchForEnemy();
             return;
         }
@@ -94,6 +94,7 @@ public class MechController : MonoBehaviour
             {
                 if (mech.team != team & mech.isActiveAndEnabled)
                 {
+
 
                     agent.SetDestination(mech.gameObject.transform.position);
                     state = State.MovingToAttack;
@@ -152,9 +153,23 @@ public class MechController : MonoBehaviour
         if (attackTimer >= fireRate)
         {
             anim.SetTrigger("Shoot");
+<<<<<<< HEAD
             Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLoc.position, projectileSpawnLoc.rotation);
             projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 100);
+=======
+>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a
             attackTimer = 0;
+        }
+    }
+
+    public void Fire()
+    {
+        foreach (Transform spawnLoc in projectileSpawnLoc)
+        {
+            if(spawnLoc != null) { return; }
+            Projectile projectile = Instantiate(projectilePrefab, spawnLoc.position, spawnLoc.rotation);
+            projectile.ownerMech = this;
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 500);
         }
     }
     void Die()
@@ -200,5 +215,31 @@ public class MechController : MonoBehaviour
     public Team GetTeam() 
     {
         return this.team;
+    }
+
+    public bool Interact(Interactor interactor)
+    {
+        interactor.TryGetComponent<ThirdPersonController>(out ThirdPersonController player);
+        if (team == Team.Player)
+        {
+;
+            if (player.part != null)
+            {
+                if (player.part.repaired)
+                {
+                    SwapPart(player.part);
+                    player.part = null;
+                    return true;
+                }
+            }
+            
+        }
+        return false;
+    }
+
+    public void SwapPart(DroppedPart part)
+    {
+        Destroy(part.gameObject);
+        // do something here
     }
 }

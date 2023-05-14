@@ -90,7 +90,7 @@ public class ThirdPersonController : MonoBehaviour
         }
 
 
-        rb.velocity = new Vector3(moveDirection.x * speed  , -9.81f, moveDirection.z * speed );
+        rb.velocity = new Vector3(moveDirection.x * speed  , -9.81f, moveDirection.z * speed ) * (Time.deltaTime * 100);
         anim.SetFloat("Speed", speed);
 
     }

@@ -29,6 +29,7 @@ public class DroppedPart : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<ThirdPersonController>(out ThirdPersonController player))
         {
+            if(player.part != null) { return; }
             onFloor = false;
             sphere.SetActive(false);
             transform.parent = player.backslot;
