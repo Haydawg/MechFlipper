@@ -14,7 +14,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] private int maxNumOfMechs;
     [SerializeField] private float spawnTime;
     private float spawnTimer;
-    [SerializeField] private MechController mechPrefab;
+    [SerializeField] private MechController[] mechPrefab;
     [SerializeField] private Transform walkToTarget;
 
     // Start is called before the first frame update
@@ -43,7 +43,7 @@ public class SpawnController : MonoBehaviour
 
     private void Spawn()
     {
-        MechController mech = Instantiate(mechPrefab, spawnLocations[0].position, Quaternion.identity);
+        MechController mech = Instantiate(mechPrefab[Random.Range(0,mechPrefab.Length)], spawnLocations[0].position, Quaternion.identity);
         numOfEnemyMechs++;
         mech.SetTeam(MechController.Team.Enemy);
         mech.InitMech(walkToTarget);

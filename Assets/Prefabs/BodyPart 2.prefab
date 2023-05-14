@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1398625540330903381}
   - component: {fileID: 1398625540330903374}
   m_Layer: 0
-  m_Name: BodyPart
+  m_Name: BodyPart 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,43 +176,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.4242
+      value: 0.75251
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.4242
+      value: 0.75251
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.4242
+      value: 0.75251
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0184
+      value: 0.0159
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1057
+      value: -0.0043
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0143
+      value: 0.0026
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.000000053385072
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071067
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000005338508
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cef376e1b34838f478d010ade7b8850b, type: 2}
+    - target: {fileID: -5754084199372789682, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8066718161041382914, guid: de45be8f2d135c54ba57f5eda6ad04fc, type: 3}
     - target: {fileID: 919132149155446097, guid: bca9c0a463f4fc640abb9b0452bfa0f2, type: 3}
       propertyPath: m_Name
       value: Bot1-Arm-R

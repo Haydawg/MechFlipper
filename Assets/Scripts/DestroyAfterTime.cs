@@ -12,7 +12,7 @@ public class DestroyAfterTime : MonoBehaviour
 
     private IEnumerator Remove()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
 }

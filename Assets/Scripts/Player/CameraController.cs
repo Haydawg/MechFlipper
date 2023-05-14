@@ -41,6 +41,7 @@ public class CameraController : MonoBehaviour
                 offset.y = minY;
             }
             transform.position = playerController.transform.position + offset;
+
             transform.LookAt(playerController.transform.position + Vector3.up * 2);
         }
     }
