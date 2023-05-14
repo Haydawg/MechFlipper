@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public int mechsRemaining;
     public static GameManager Instance;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,12 @@ public class GameManager : MonoBehaviour
         mechsRemaining--;
         if(mechsRemaining == 0 ) 
         {
-            //GameOver
+            EventManager.Instance.OnGameLoss.Invoke();
         }
+    }
+
+    public void MechReachesEnd()
+    {
+        EventManager.Instance.OnGameWin.Invoke();
     }
 }
