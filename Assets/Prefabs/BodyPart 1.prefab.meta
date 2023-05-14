@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/Anne Environment/Textures/PNG.meta
+guid: 99cd8ffcf22de0f48b4c76d440c5c5f2
+folderAsset: yes
+DefaultImporter:
+========
 guid: 5ec11bdf26247bf4fa065b0502781ec5
 PrefabImporter:
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/BodyPart 1.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

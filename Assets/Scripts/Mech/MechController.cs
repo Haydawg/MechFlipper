@@ -153,6 +153,11 @@ public class MechController : MonoBehaviour, IInteractable
         if (attackTimer >= fireRate)
         {
             anim.SetTrigger("Shoot");
+<<<<<<< HEAD
+            Projectile projectile = Instantiate(projectilePrefab, projectileSpawnLoc.position, projectileSpawnLoc.rotation);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 100);
+=======
+>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a
             attackTimer = 0;
         }
     }

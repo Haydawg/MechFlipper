@@ -30,10 +30,16 @@ Transform:
   m_LocalPosition: {x: 0.90999997, y: 19.866665, z: 5.099997}
   m_LocalScale: {x: -800, y: -800, z: -800}
   m_ConstrainProportionsScale: 0
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_Children: []
+  m_Father: {fileID: 8417563139750465048}
+  m_RootOrder: 2
+========
   m_Children:
   - {fileID: 8252695657704924840}
   m_Father: {fileID: 8417563139750465048}
   m_RootOrder: 1
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &1248684244261703055
 SkinnedMeshRenderer:
@@ -174,7 +180,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 10
+========
   m_RootOrder: 8
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &7276046232162319499
 SkinnedMeshRenderer:
@@ -427,7 +437,11 @@ Transform:
   m_Children:
   - {fileID: 4387753284454930384}
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 4
+========
   m_RootOrder: 2
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1421037705567541543
 GameObject:
@@ -617,7 +631,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 12
+========
   m_RootOrder: 10
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &9195149719503862047
 SkinnedMeshRenderer:
@@ -821,6 +839,10 @@ GameObject:
   - component: {fileID: 8252695657704924840}
   - component: {fileID: 3033010496777051766}
   - component: {fileID: 7173040140173453450}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  - component: {fileID: 144287491824972580}
+========
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_Layer: 6
   m_Name: Arm-R.001
   m_TagString: Untagged
@@ -835,6 +857,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2276773539019677191}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_LocalRotation: {x: 0.7071068, y: 0.7071067, z: -0.000000053385072, w: -0.00000005338508}
+  m_LocalPosition: {x: -3.2000003, y: 19.856667, z: 5.099997}
+  m_LocalScale: {x: -800, y: -800, z: -800}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3305929064727636124}
+  m_Father: {fileID: 8417563139750465048}
+  m_RootOrder: 3
+========
   m_LocalRotation: {x: 0.000000008795783, y: -0.00000004214685, z: -0, w: 1}
   m_LocalPosition: {x: 0.000012499093, y: 0.0051375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -843,6 +875,7 @@ Transform:
   - {fileID: 3305929064727636124}
   m_Father: {fileID: 5483708071318318140}
   m_RootOrder: 0
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3033010496777051766
 SkinnedMeshRenderer:
@@ -938,6 +971,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6396960026581628050, guid: 47c567760781d5247b91e25eebb5adec, type: 3}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+--- !u!114 &144287491824972580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276773539019677191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6685df4a906b2b24494629ebe801da55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedPart: {fileID: 1398625540330903381, guid: 154613ce82a682f4dade86466c539d26, type: 3}
+========
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
 --- !u!1 &2278407200716633758
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +1018,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 9
+========
   m_RootOrder: 7
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &8566571701815924941
 SkinnedMeshRenderer:
@@ -1076,6 +1129,10 @@ GameObject:
   - component: {fileID: 4512244906713763399}
   - component: {fileID: 5195875260949779144}
   - component: {fileID: 7877757283511293589}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  - component: {fileID: 144287491481447962}
+========
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_Layer: 6
   m_Name: Arm-L.001
   m_TagString: Untagged
@@ -1090,6 +1147,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2286790834348049570}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_LocalRotation: {x: 0.7071068, y: -0.7071067, z: -0.000000053385072, w: 0.000000053385083}
+  m_LocalPosition: {x: -3.2000005, y: 19.856667, z: -4.900003}
+  m_LocalScale: {x: 800, y: 800, z: 800}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3343228242459278918}
+  m_Father: {fileID: 8417563139750465048}
+  m_RootOrder: 1
+========
   m_LocalRotation: {x: -0.000000008795779, y: -0.00000004214686, z: -0, w: 1}
   m_LocalPosition: {x: 0.000012496708, y: 0.0051375013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1098,6 +1165,7 @@ Transform:
   - {fileID: 3343228242459278918}
   m_Father: {fileID: 4202561646547858846}
   m_RootOrder: 0
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &5195875260949779144
 SkinnedMeshRenderer:
@@ -1193,6 +1261,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5967678800400332779, guid: 47c567760781d5247b91e25eebb5adec, type: 3}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+--- !u!114 &144287491481447962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2286790834348049570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6685df4a906b2b24494629ebe801da55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedPart: {fileID: 1398625540330903381, guid: 154613ce82a682f4dade86466c539d26, type: 3}
+========
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
 --- !u!1 &2373555844189386603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,8 +1307,12 @@ Transform:
   m_LocalPosition: {x: 0.90999985, y: 19.866665, z: -4.900003}
   m_LocalScale: {x: 800, y: 800, z: 800}
   m_ConstrainProportionsScale: 0
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_Children: []
+========
   m_Children:
   - {fileID: 4512244906713763399}
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_Father: {fileID: 8417563139750465048}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1602,8 +1690,13 @@ GameObject:
   - component: {fileID: 5987509618694888496}
   - component: {fileID: 1659705224799811764}
   - component: {fileID: 2980850204801980904}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_Layer: 0
+  m_Name: MinuteMan 2
+========
   m_Layer: 7
   m_Name: MinuteMan
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1652,15 +1745,22 @@ MonoBehaviour:
   - {fileID: 1398625540330903380, guid: 154613ce82a682f4dade86466c539d26, type: 3}
   projectilePrefab: {fileID: 775656324178166898, guid: 9d43ecb60e049664d8f06de420caf556, type: 3}
   projectileVelocity: 100
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  projectileSpawnLoc: {fileID: 3343228242459278918}
+========
   projectileSpawnLoc:
   - {fileID: 3343228242459278918}
   - {fileID: 3305929064727636124}
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   endPoint: {fileID: 0}
   target: {fileID: 0}
   isMoving: 0
   team: 0
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+========
   prompt: 
   canInteract: 0
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
 --- !u!195 &5987509618694888496
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1712,7 +1812,11 @@ CapsuleCollider:
   m_Radius: 5
   m_Height: 30
   m_Direction: 1
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_Center: {x: 0, y: 0, z: 0}
+========
   m_Center: {x: 0, y: 13.44, z: 0}
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
 --- !u!1 &3262447167502574786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1911,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 7
+========
   m_RootOrder: 5
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &8240547901302715467
 SkinnedMeshRenderer:
@@ -2129,7 +2237,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 13
+========
   m_RootOrder: 11
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &5226081816536204292
 SkinnedMeshRenderer:
@@ -2383,7 +2495,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 8
+========
   m_RootOrder: 6
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3630906482309029717
 SkinnedMeshRenderer:
@@ -2574,7 +2690,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 6
+========
   m_RootOrder: 4
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3491790662611396811
 SkinnedMeshRenderer:
@@ -2865,7 +2985,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 11
+========
   m_RootOrder: 9
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6411669760805290027
 SkinnedMeshRenderer:
@@ -2991,7 +3115,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8417563139750465048}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  m_RootOrder: 5
+========
   m_RootOrder: 3
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &5295154516378786804
 SkinnedMeshRenderer:
@@ -3161,7 +3289,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8417563139750465048}
   - component: {fileID: 8449756603314175274}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+========
   - component: {fileID: 3199944069483475230}
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   m_Layer: 0
   m_Name: Mech1 (1)
   m_TagString: Untagged
@@ -3182,7 +3313,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4202561646547858846}
+<<<<<<<< HEAD:Assets/Prefabs/MinuteMan 2.prefab
+  - {fileID: 4512244906713763399}
   - {fileID: 5483708071318318140}
+  - {fileID: 8252695657704924840}
+========
+  - {fileID: 5483708071318318140}
+>>>>>>>> 92b38448ff1efc1edcf61899c02a25fbbfeae17a:Assets/Prefabs/MinuteMan.prefab
   - {fileID: 604014793498844806}
   - {fileID: 4194327041332769114}
   - {fileID: 9123177298997730194}
